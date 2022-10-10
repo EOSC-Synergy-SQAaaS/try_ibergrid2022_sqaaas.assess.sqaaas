@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/rjdmartins/try_ibergrid2022_sqaaas:
+      branch: master
+      repo: https://github.com/rjdmartins/try_ibergrid2022_sqaaas
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas git:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-scarlet-liger.sh
+        container: qc.acc_gimpy-coral-iguana
+  QC.Doc:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-gold-mau.sh
+        container: qc.doc_clammy-blue-gibbon
+      github.com/rjdmartins/try_ibergrid2022_sqaaas git:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-copper-badger.sh
+        container: qc.doc_jumpy-heliotrope-tetra
+      github.com/rjdmartins/try_ibergrid2022_sqaaas markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-carmine-otter.sh
+        container: qc.doc_woozy-cardinal-mongoose
+      github.com/rjdmartins/try_ibergrid2022_sqaaas restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-goldenrod-lionfish.sh
+        container: qc.doc_queasy-white-eel
+  QC.Lic:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-charcoal-shrimp.sh
+        container: qc.lic_nerdy-magnolia-cow
+  QC.Sec:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-lilac-lemur.sh
+        container: qc.sec_shabby-cyan-mayfly
+  QC.Sty:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-tan-newt.sh
+        container: qc.sty_pokey-pumpkin-schnauzer
+  QC.Ver:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-tan-hound.sh
+        container: qc.ver_leaky-lime-mau
+timeout: 1800
