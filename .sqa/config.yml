@@ -15,48 +15,62 @@ sqa_criteria:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-bistre-bear.sh
-        container: qc.acc_snazzy-denim-hedgehog
+        - /usr/bin/env sh .sqa/script.gimpy-cornflower-spaniel.sh
+        container: qc.acc_flaky-pumpkin-clam
   QC.Doc:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-plum-orangutan.sh
-        container: qc.doc_crabby-silver-eel
+        - /usr/bin/env sh .sqa/script.chewy-indigo-beaver.sh
+        container: qc.doc_queasy-cobalt-kangaroo
       github.com/rjdmartins/try_ibergrid2022_sqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-brown-manatee.sh
-        container: qc.doc_nerdy-red-mammoth
+        - /usr/bin/env sh .sqa/script.grumpy-linen-owl.sh
+        container: qc.doc_zippy-lavender-zonkey
       github.com/rjdmartins/try_ibergrid2022_sqaaas markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-firebrick-camel.sh
-        container: qc.doc_trippy-grey-spitz
+        - /usr/bin/env sh .sqa/script.frumpy-beige-stoat.sh
+        container: qc.doc_baggy-white-loon
       github.com/rjdmartins/try_ibergrid2022_sqaaas restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-tomato-cougar.sh
-        container: qc.doc_randy-cinnamon-swan
+        - /usr/bin/env sh .sqa/script.homely-aquamarine-urchin.sh
+        container: qc.doc_smelly-yellow-quoll
   QC.Lic:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-teal-havanese.sh
-        container: qc.lic_surly-carmine-devil
+        - /usr/bin/env sh .sqa/script.squirrely-copper-frise.sh
+        container: qc.lic_smelly-ivory-eleuth
+  QC.Met:
+    repos:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-ivory-earwig.sh
+        container: qc.met_jumpy-chestnut-chipmunk
+      github.com/rjdmartins/try_ibergrid2022_sqaaas validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-bronze-mayfly.sh
+        container: qc.met_breezy-harlequin-wrasse
   QC.Sec:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-pumpkin-eleuth.sh
-        container: qc.sec_baggy-puce-stoat
+        - /usr/bin/env sh .sqa/script.nerdy-charcoal-olm.sh
+        container: qc.sec_crappy-ruby-javanese
   QC.Sty:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-cobalt-tarantula.sh
-        container: qc.sty_bluesy-fuchsia-eagle
+        - /usr/bin/env sh .sqa/script.wheezy-mustard-mongoose.sh
+        container: qc.sty_paltry-brown-llama
+      github.com/rjdmartins/try_ibergrid2022_sqaaas jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-chestnut-scorpion.sh
+        container: qc.sty_flimsy-gamboge-civet
   QC.Ver:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-azure-frise.sh
-        container: qc.ver_jumpy-buff-tarantula
+        - /usr/bin/env sh .sqa/script.skanky-purple-lizard.sh
+        container: qc.ver_pokey-rose-zebu
 timeout: 1800
