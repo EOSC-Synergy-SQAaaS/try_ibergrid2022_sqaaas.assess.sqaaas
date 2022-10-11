@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-celadon-lobster.sh
-        container: qc.acc_tasty-grey-angelfish
+        - /usr/bin/env sh .sqa/script.flaky-tangerine-dachshund.sh
+        container: qc.acc_gamy-firebrick-camel
   QC.Doc:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-aqua-cichlid.sh
-        container: qc.doc_stinky-turquoise-newfoundland
+        - /usr/bin/env sh .sqa/script.ugly-periwinkle-sheepdog.sh
+        container: qc.doc_sunny-harlequin-gar
       github.com/rjdmartins/try_ibergrid2022_sqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-lavender-frog.sh
-        container: qc.doc_shaggy-champagne-bloodhound
+        - /usr/bin/env sh .sqa/script.flimsy-bronze-grasshopper.sh
+        container: qc.doc_slaphappy-burgundy-gharial
       github.com/rjdmartins/try_ibergrid2022_sqaaas markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-denim-beagle.sh
-        container: qc.doc_queasy-goldenrod-squid
+        - /usr/bin/env sh .sqa/script.tacky-eggplant-ocelot.sh
+        container: qc.doc_woolly-seashell-centipede
       github.com/rjdmartins/try_ibergrid2022_sqaaas restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-chartreuse-devil.sh
-        container: qc.doc_woolly-malachite-yak
+        - /usr/bin/env sh .sqa/script.flimsy-platinum-coyote.sh
+        container: qc.doc_greasy-scarlet-collie
   QC.Lic:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-charcoal-fly.sh
-        container: qc.lic_gummy-peach-toad
+        - /usr/bin/env sh .sqa/script.woolly-seashell-boar.sh
+        container: qc.lic_squirrely-tomato-crab
   QC.Sec:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-azure-jaguar.sh
-        container: qc.sec_beady-goldenrod-cow
+        - /usr/bin/env sh .sqa/script.slimy-myrtle-saola.sh
+        container: qc.sec_scummy-cobalt-echidna
   QC.Sty:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-wheat-stoat.sh
-        container: qc.sty_cheeky-orchid-goat
+        - /usr/bin/env sh .sqa/script.nippy-pink-baboon.sh
+        container: qc.sty_muzzy-copper-kudu
   QC.Ver:
     repos:
       github.com/rjdmartins/try_ibergrid2022_sqaaas get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-periwinkle-sparrow.sh
-        container: qc.ver_pasty-lavender-quokka
+        - /usr/bin/env sh .sqa/script.tacky-ochre-dormouse.sh
+        container: qc.ver_nerdy-amber-caiman
 timeout: 1800
